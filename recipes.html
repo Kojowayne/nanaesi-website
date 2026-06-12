@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<title>Healthy Recipes & Meal Plans | Nana Esi</title>
+<style>
+  :root{
+    --green:#3f5d3a;
+    --green-dark:#2c4128;
+    --cream:#fbf6ee;
+    --peach:#f4c9a8;
+    --gold:#c9a063;
+    --text:#2b2b27;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--text);background:var(--cream);line-height:1.6;}
+  a{text-decoration:none;}
+  nav{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:18px 6%;position:sticky;top:0;background:var(--cream);
+    z-index:100;border-bottom:1px solid rgba(0,0,0,0.06);
+  }
+  .logo{font-weight:800;font-size:1.4rem;color:var(--green);letter-spacing:1px;display:flex;align-items:center;gap:8px;}
+  .logo-icon{width:32px;height:32px;}
+  .logo span{color:var(--gold);}
+  .back-link{color:var(--green-dark);font-weight:600;font-size:0.95rem;}
+
+  .page-hero{
+    padding:60px 6%;background:linear-gradient(135deg,var(--cream) 60%, var(--peach) 100%);
+    text-align:center;
+  }
+  .page-hero .badge{
+    display:inline-block;background:var(--green);color:#fff;padding:6px 16px;
+    border-radius:30px;font-size:0.8rem;font-weight:600;letter-spacing:1px;margin-bottom:18px;
+  }
+  .page-hero h1{font-size:clamp(2rem,5vw,3rem);color:var(--green-dark);font-weight:800;margin-bottom:14px;}
+  .page-hero p{max-width:600px;margin:0 auto;color:#555;font-size:1.1rem;}
+
+  .section{padding:60px 6%;max-width:1000px;margin:0 auto;}
+  .section h2{font-size:clamp(1.6rem,4vw,2.2rem);color:var(--green-dark);font-weight:800;margin-bottom:20px;text-align:center;}
+  .section .sub{text-align:center;color:#777;max-width:600px;margin:0 auto 40px;font-size:1.05rem;}
+
+  .recipe-grid{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;}
+  .recipe{
+    background:#fff;border-radius:16px;overflow:hidden;max-width:300px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:0.25s;
+  }
+  .recipe:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(0,0,0,0.1);}
+  .recipe .img{
+    height:160px;background:var(--peach);display:flex;align-items:center;
+    justify-content:center;font-size:3rem;
+  }
+  .recipe .body{padding:20px;}
+  .recipe h3{color:var(--green-dark);margin-bottom:8px;font-size:1.1rem;}
+  .recipe p{color:#666;font-size:0.9rem;margin-bottom:10px;}
+  .recipe .tag{
+    display:inline-block;background:var(--cream);color:var(--green);
+    padding:4px 12px;border-radius:20px;font-size:0.78rem;font-weight:600;
+  }
+
+  .final-cta{text-align:center;padding:80px 6%;background:var(--green-dark);color:#fff;}
+  .final-cta h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:14px;font-weight:800;}
+  .final-cta p{color:#d8e4d6;margin-bottom:30px;font-size:1.05rem;}
+  .cta-main{
+    display:inline-block;background:var(--peach);color:var(--green-dark);
+    padding:16px 36px;border-radius:40px;font-weight:700;font-size:1.05rem;
+    transition:0.25s;box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  }
+  .cta-main:hover{background:#fff;transform:translateY(-2px);}
+
+  footer{text-align:center;padding:30px;background:var(--cream);font-size:0.85rem;color:#888;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><img src="logo.svg" alt="" class="logo-icon">Nana<span>Esi</span></div>
+  <a href="index.html" class="back-link"> Back to Home</a>
+</nav>
+
+<section class="page-hero">
+  <span class="badge">HEALTHY RECIPES & MEAL PLANS</span>
+  <h1>Food You'll Actually Enjoy</h1>
+  <p>Simple, satisfying, weight-loss-friendly recipes — no boring diet food, no extreme restriction. Just real meals that fit a healthier lifestyle.</p>
+</section>
+
+<section class="section">
+  <h2>Featured Recipes</h2>
+  <p class="sub">A taste of the kind of meals included in Nana Esi's recipe library and meal plans.</p>
+  <div class="recipe-grid">
+    <div class="recipe">
+      <div class="img">🥗</div>
+      <div class="body">
+        <h3>Garden Salad Plate</h3>
+        <p>A colorful, fiber-rich salad with grilled chicken, fresh veggies, and a light dressing — filling without the heaviness.</p>
+        <span class="tag">High Protein</span>
+      </div>
+    </div>
+    <div class="recipe">
+      <div class="img">🍳</div>
+      <div class="body">
+        <h3>Kosua ne Mako Breakfast</h3>
+        <p>A flavorful, protein-packed breakfast favorite — quick to make and keeps you full through the morning.</p>
+        <span class="tag">Breakfast</span>
+      </div>
+    </div>
+    <div class="recipe">
+      <div class="img">🍲</div>
+      <div class="body">
+        <h3>Veggie-Loaded Waffle Plate</h3>
+        <p>A savory twist on a classic favorite, balanced with grilled protein and fresh vegetables for a satisfying meal.</p>
+        <span class="tag">Dinner</span>
+      </div>
+    </div>
+    <div class="recipe">
+      <div class="img">🥤</div>
+      <div class="body">
+        <h3>Detox Infused Water</h3>
+        <p>A refreshing, naturally flavored drink that supports hydration and digestion — easy to prep ahead.</p>
+        <span class="tag">Drinks</span>
+      </div>
+    </div>
+    <div class="recipe">
+      <div class="img">🍛</div>
+      <div class="body">
+        <h3>Balanced Lunch Bowl</h3>
+        <p>A simple grain, protein, and vegetable bowl designed to keep portions in check without feeling restrictive.</p>
+        <span class="tag">Lunch</span>
+      </div>
+    </div>
+    <div class="recipe">
+      <div class="img">🍓</div>
+      <div class="body">
+        <h3>Guilt-Free Snacks</h3>
+        <p>Quick, satisfying snack ideas to curb cravings between meals without derailing your progress.</p>
+        <span class="tag">Snacks</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <h2>Want the Full Meal Plan?</h2>
+  <p>Book a free consultation and get a personalized meal plan as part of your coaching journey.</p>
+  <a href="https://calendly.com/davidacquahnunoo/30min" target="_blank" rel="noopener noreferrer" class="cta-main">Book Your Free Consult →</a>
+</section>
+
+<footer>© 2026 Nana Esi · Weight Management Coach · @i_am_esi</footer>
+
+</body>
+</html>

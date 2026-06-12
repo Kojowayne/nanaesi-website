@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<title>Nana Esi | Weight Management Coach</title>
+<style>
+  :root{
+    --green:#3f5d3a;
+    --green-dark:#2c4128;
+    --cream:#fbf6ee;
+    --peach:#f4c9a8;
+    --gold:#c9a063;
+    --text:#2b2b27;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    color:var(--text);
+    background:var(--cream);
+    line-height:1.5;
+  }
+  a{text-decoration:none;}
+
+  /* NAV */
+  nav{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:18px 6%;
+    position:sticky;top:0;background:var(--cream);
+    z-index:100;
+    border-bottom:1px solid rgba(0,0,0,0.06);
+  }
+  .logo{font-weight:800;font-size:1.4rem;color:var(--green);letter-spacing:1px;display:flex;align-items:center;gap:8px;}
+  .logo-icon{width:32px;height:32px;}
+  .logo span{color:var(--gold);}
+  nav .cta-small{
+    background:var(--green);color:#fff;padding:10px 22px;border-radius:30px;
+    font-weight:600;font-size:0.9rem;transition:0.2s;
+  }
+  nav .cta-small:hover{background:var(--green-dark);}
+
+  /* HERO */
+  .hero{
+    display:flex;flex-wrap:wrap;align-items:center;
+    padding:60px 6%;gap:40px;
+    background:linear-gradient(135deg,var(--cream) 60%, var(--peach) 100%);
+  }
+  .hero-text{flex:1;min-width:300px;}
+  .hero-text h1{
+    font-size:clamp(2.2rem,5vw,3.4rem);
+    color:var(--green-dark);
+    font-weight:800;
+    line-height:1.15;
+    margin-bottom:18px;
+  }
+  .hero-text h1 em{color:var(--gold);font-style:normal;}
+  .hero-text p{font-size:1.1rem;max-width:480px;margin-bottom:28px;color:#444;}
+  .badge{
+    display:inline-block;background:var(--green);color:#fff;
+    padding:6px 16px;border-radius:30px;font-size:0.8rem;
+    font-weight:600;letter-spacing:1px;margin-bottom:18px;
+  }
+  .cta-main{
+    display:inline-block;background:var(--green);color:#fff;
+    padding:16px 36px;border-radius:40px;font-weight:700;
+    font-size:1.05rem;transition:0.25s;box-shadow:0 8px 20px rgba(63,93,58,0.25);
+  }
+  .cta-main:hover{background:var(--green-dark);transform:translateY(-2px);}
+  .hero-img{
+    flex:1;min-width:280px;display:flex;justify-content:center;
+  }
+  .hero-img .frame{
+    width:320px;height:320px;border-radius:50%;
+    overflow:hidden;border:8px solid #fff;
+    box-shadow:0 20px 40px rgba(0,0,0,0.12);
+    background:var(--peach);
+    display:flex;align-items:center;justify-content:center;
+    font-size:4rem;
+  }
+
+  /* STATS */
+  .stats{
+    display:flex;justify-content:center;gap:60px;flex-wrap:wrap;
+    padding:40px 6%;background:#fff;
+    text-align:center;
+  }
+  .stats div h2{font-size:2rem;color:var(--green);font-weight:800;}
+  .stats div p{font-size:0.9rem;color:#777;text-transform:uppercase;letter-spacing:1px;}
+
+  /* SECTION TITLES */
+  .section{padding:70px 6%;}
+  .section h2{
+    text-align:center;font-size:clamp(1.8rem,4vw,2.6rem);
+    color:var(--green-dark);font-weight:800;margin-bottom:12px;
+  }
+  .section .sub{
+    text-align:center;color:#777;max-width:600px;margin:0 auto 50px;
+    font-size:1.05rem;
+  }
+
+  /* SERVICES */
+  .services{background:var(--cream);}
+  .cards{display:flex;gap:28px;flex-wrap:wrap;justify-content:center;}
+  .card{
+    background:#fff;border-radius:18px;padding:32px 26px;max-width:320px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);transition:0.25s;
+    border-top:5px solid var(--green);
+    display:block;color:var(--text);
+  }
+  .card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(0,0,0,0.1);}
+  .card .icon{font-size:2.2rem;margin-bottom:14px;}
+  .card h3{font-size:1.25rem;margin-bottom:10px;color:var(--green-dark);}
+  .card p{color:#666;font-size:0.95rem;margin-bottom:14px;}
+  .card-link{color:var(--green);font-weight:700;font-size:0.95rem;}
+  .card:hover .card-link{text-decoration:underline;}
+
+  /* TRANSFORMATION / ABOUT */
+  .about{
+    display:flex;flex-wrap:wrap;align-items:center;gap:40px;
+    background:var(--green);color:#fff;
+  }
+  .about-img{
+    flex:1;min-width:260px;display:flex;justify-content:center;
+  }
+  .about-img .circle{
+    width:260px;height:260px;border-radius:50%;background:var(--peach);
+    display:flex;align-items:center;justify-content:center;font-size:4rem;
+    border:8px solid rgba(255,255,255,0.25);
+  }
+  .about-text{flex:2;min-width:280px;}
+  .about-text h2{font-size:2.2rem;margin-bottom:16px;font-weight:800;text-align:left;}
+  .about-text p{margin-bottom:16px;color:#e8efe6;font-size:1.05rem;}
+  .about-text ul{list-style:none;margin-top:18px;}
+  .about-text li{
+    margin-bottom:10px;padding-left:28px;position:relative;font-size:1rem;
+  }
+  .about-text li::before{
+    content:"✓";position:absolute;left:0;color:var(--peach);font-weight:800;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials{background:#fff;}
+  .t-cards{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;}
+  .t-card{
+    background:var(--cream);border-radius:16px;padding:28px;max-width:330px;
+    position:relative;
+  }
+  .t-card p{font-style:italic;color:#555;margin-bottom:14px;}
+  .t-card .stars{color:var(--gold);margin-bottom:10px;font-size:1.1rem;}
+  .t-card .name{font-weight:700;color:var(--green-dark);}
+
+  /* SOCIAL PROOF / TIKTOK */
+  .social{
+    text-align:center;background:linear-gradient(135deg,var(--peach),var(--cream));
+    padding:70px 6%;
+  }
+  .social h2{color:var(--green-dark);font-weight:800;font-size:2rem;margin-bottom:14px;}
+  .social p{color:#555;margin-bottom:24px;}
+  .tiktok-handle{
+    display:inline-flex;align-items:center;gap:10px;
+    background:#fff;padding:14px 28px;border-radius:40px;
+    font-weight:700;color:var(--green-dark);font-size:1.1rem;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  }
+
+  /* FINAL CTA */
+  .final-cta{
+    text-align:center;padding:80px 6%;background:var(--green-dark);color:#fff;
+  }
+  .final-cta h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:14px;font-weight:800;}
+  .final-cta p{color:#d8e4d6;margin-bottom:30px;font-size:1.05rem;}
+  .final-cta .cta-main{background:var(--peach);color:var(--green-dark);}
+  .final-cta .cta-main:hover{background:#fff;}
+
+  /* FOOTER */
+  footer{
+    text-align:center;padding:30px;background:var(--cream);
+    font-size:0.85rem;color:#888;
+  }
+
+  @media(max-width:600px){
+    .stats{gap:30px;}
+    .about-text h2, .hero-text h1{text-align:center;}
+    .about-text{text-align:center;}
+    .about-text li{text-align:left;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><img src="logo.svg" alt="" class="logo-icon">Nana<span>Esi</span></div>
+  <a href="https://calendly.com/davidacquahnunoo/30min" target="_blank" rel="noopener noreferrer" class="cta-small">Book Free Consult</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <span class="badge">WEIGHT MANAGEMENT COACH</span>
+    <h1>Real Results. <em>Real You.</em></h1>
+    <p>Sustainable weight loss coaching rooted in simple habits, real food, and a lifestyle you can actually stick to. No fads. No shortcuts. Just steady, lasting change.</p>
+    <a href="https://calendly.com/davidacquahnunoo/30min" target="_blank" rel="noopener noreferrer" class="cta-main">Book Your Free Consultation </a>
+  </div>
+  <div class="hero-img">
+    <div class="frame">🌿</div>
+  </div>
+</section>
+
+<section class="stats">
+  <div><h2>4,300+</h2><p>Community Members</p></div>
+  <div><h2>31.5K+</h2><p>Lives Inspired</p></div>
+  <div><h2>100%</h2><p>Personalized Plans</p></div>
+</section>
+
+<section class="section services">
+  <h2>How I Can Help You</h2>
+  <p class="sub">Coaching designed around your body, your routine, and your goals — not a one-size-fits-all program.</p>
+  <div class="cards">
+    <a href="coaching.html" class="card">
+      <div class="icon">🥗</div>
+      <h3> Coaching</h3>
+      <p>Personalized weight loss plans built around your lifestyle, preferences, and health goals with ongoing support.</p>
+      <span class="card-link">Learn more </span>
+    </a>
+    <a href="classes.html" class="card">
+      <div class="icon">📚</div>
+      <h3>Weightloss Class Series</h3>
+      <p>Step-by-step group classes covering nutrition, habit-building, and mindset shifts that create lasting results.</p>
+      <span class="card-link">Learn more </span>
+    </a>
+    <a href="recipes.html" class="card">
+      <div class="icon">🍳</div>
+      <h3>Healthy Recipes & Meal Plans</h3>
+      <p>Simple, delicious, weight-loss-friendly recipes you can actually enjoy and stick to, no boring diets.</p>
+      <span class="card-link">Learn more </span>
+    </a>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about-img">
+    <div class="circle">💪🏽</div>
+  </div>
+  <div class="about-text">
+    <h2>Hi, I'm Nana Esi</h2>
+    <p>I help people build healthier bodies and lives through realistic, sustainable habits; not extreme diets or quick fixes. My approach combines nutrition guidance, accountability, and lifestyle coaching tailored to YOU.</p>
+    <ul>
+      <li>Personalized coaching based on your body & goals</li>
+      <li>Accountability check-ins to keep you on track</li>
+      <li>Realistic nutrition, no restrictive diets</li>
+      <li>A supportive, judgment-free community</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section testimonials">
+  <h2>What Clients Are Saying</h2>
+  <p class="sub">Real people. Real transformations.</p>
+  <div class="t-cards">
+    <div class="t-card">
+      <div class="stars">★★★★★</div>
+      <p>"Nana Esi's program completely changed how I think about food. I've lost weight without feeling like I'm constantly dieting."</p>
+      <div class="name"> Akosua B.</div>
+    </div>
+    <div class="t-card">
+      <div class="stars">★★★★★</div>
+      <p>"The accountability check-ins made all the difference. I finally feel in control of my health journey."</p>
+      <div class="name"> Daniel T.</div>
+    </div>
+    <div class="t-card">
+      <div class="stars">★★★★★</div>
+      <p>"Simple, practical, and sustainable. Down 8kg and feeling stronger every week!"</p>
+      <div class="name"> Linda M.</div>
+    </div>
+  </div>
+</section>
+
+<section class="social">
+  <h2>Follow the Journey on TikTok</h2>
+  <p>Daily tips, recipes, and real lifestyle content from Nana Esi</p>
+  <a href="https://www.tiktok.com/@i_am_esi" target="_blank" rel="noopener noreferrer" class="tiktok-handle">
+    🎵 @i_am_esi - Lifestyle & Weightloss
+  </a>
+</section>
+
+<section class="final-cta" id="booking">
+  <h2>Ready to Start Your Transformation?</h2>
+  <p>Book a free, no-pressure consultation call and let's talk about your goals.</p>
+  <a href="https://calendly.com/davidacquahnunoo/30min" target="_blank" rel="noopener noreferrer" class="cta-main">Book Your Free Consult </a>
+</section>
+
+<footer>
+  © 2026 Nana Esi · Weight Management Coach · @i_am_esi
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<title>1:1 Coaching | Nana Esi</title>
+<style>
+  :root{
+    --green:#3f5d3a;
+    --green-dark:#2c4128;
+    --cream:#fbf6ee;
+    --peach:#f4c9a8;
+    --gold:#c9a063;
+    --text:#2b2b27;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--text);background:var(--cream);line-height:1.6;}
+  a{text-decoration:none;}
+  nav{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:18px 6%;position:sticky;top:0;background:var(--cream);
+    z-index:100;border-bottom:1px solid rgba(0,0,0,0.06);
+  }
+  .logo{font-weight:800;font-size:1.4rem;color:var(--green);letter-spacing:1px;display:flex;align-items:center;gap:8px;}
+  .logo-icon{width:32px;height:32px;}
+  .logo span{color:var(--gold);}
+  nav .cta-small{background:var(--green);color:#fff;padding:10px 22px;border-radius:30px;font-weight:600;font-size:0.9rem;transition:0.2s;}
+  nav .cta-small:hover{background:var(--green-dark);}
+  .back-link{color:var(--green-dark);font-weight:600;font-size:0.95rem;}
+
+  .page-hero{
+    padding:60px 6%;background:linear-gradient(135deg,var(--cream) 60%, var(--peach) 100%);
+    text-align:center;
+  }
+  .page-hero .badge{
+    display:inline-block;background:var(--green);color:#fff;padding:6px 16px;
+    border-radius:30px;font-size:0.8rem;font-weight:600;letter-spacing:1px;margin-bottom:18px;
+  }
+  .page-hero h1{font-size:clamp(2rem,5vw,3rem);color:var(--green-dark);font-weight:800;margin-bottom:14px;}
+  .page-hero p{max-width:600px;margin:0 auto;color:#555;font-size:1.1rem;}
+
+  .section{padding:60px 6%;max-width:900px;margin:0 auto;}
+  .section h2{font-size:clamp(1.6rem,4vw,2.2rem);color:var(--green-dark);font-weight:800;margin-bottom:20px;}
+  .section p{color:#555;margin-bottom:16px;font-size:1.05rem;}
+
+  .feature-grid{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;padding:0 6% 60px;}
+  .feature{
+    background:#fff;border-radius:16px;padding:28px;max-width:260px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);border-top:4px solid var(--green);
+  }
+  .feature .icon{font-size:1.8rem;margin-bottom:10px;}
+  .feature h3{color:var(--green-dark);margin-bottom:8px;font-size:1.1rem;}
+  .feature p{color:#666;font-size:0.92rem;}
+
+  .steps{padding:0 6% 60px;max-width:800px;margin:0 auto;}
+  .step{display:flex;gap:18px;margin-bottom:24px;align-items:flex-start;}
+  .step .num{
+    background:var(--green);color:#fff;width:36px;height:36px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0;
+  }
+  .step h3{color:var(--green-dark);margin-bottom:4px;}
+  .step p{color:#666;font-size:0.95rem;}
+
+  .final-cta{text-align:center;padding:80px 6%;background:var(--green-dark);color:#fff;}
+  .final-cta h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:14px;font-weight:800;}
+  .final-cta p{color:#d8e4d6;margin-bottom:30px;font-size:1.05rem;}
+  .cta-main{
+    display:inline-block;background:var(--peach);color:var(--green-dark);
+    padding:16px 36px;border-radius:40px;font-weight:700;font-size:1.05rem;
+    transition:0.25s;box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  }
+  .cta-main:hover{background:#fff;transform:translateY(-2px);}
+
+  footer{text-align:center;padding:30px;background:var(--cream);font-size:0.85rem;color:#888;}
+
+  @media(max-width:600px){.feature-grid{flex-direction:column;align-items:center;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><img src="logo.svg" alt="" class="logo-icon">Nana<span>Esi</span></div>
+  <a href="index.html" class="back-link"> Back to Home</a>
+</nav>
+
+<section class="page-hero">
+  <span class="badge"> COACHING</span>
+  <h1>Personalized Coaching, Built Around You</h1>
+  <p>No cookie-cutter plans. Just a program designed for your body, your schedule, your food preferences, and your goals — with real support every step of the way.</p>
+</section>
+
+<section class="section">
+  <h2>What's Included</h2>
+  <p>One-on-one coaching means you're never figuring it out alone. Every plan starts with understanding where you are right now — your habits, your lifestyle, your relationship with food — and builds forward from there.</p>
+</section>
+
+<div class="feature-grid">
+  <div class="feature">
+    <div class="icon">📋</div>
+    <h3>Custom Nutrition Plan</h3>
+    <p>Meal guidance based on your preferences, schedule, and goals — not a generic template.</p>
+  </div>
+  <div class="feature">
+    <div class="icon">📞</div>
+    <h3>Weekly Check-ins</h3>
+    <p>Regular accountability calls or messages to track progress and adjust the plan as needed.</p>
+  </div>
+  <div class="feature">
+    <div class="icon">🧠</div>
+    <h3>Mindset & Habit Coaching</h3>
+    <p>Address the "why" behind eating patterns — building habits that actually last.</p>
+  </div>
+  <div class="feature">
+    <div class="icon">📈</div>
+    <h3>Progress Tracking</h3>
+    <p>Simple tools to track measurements, energy, and wins beyond just the scale.</p>
+  </div>
+</div>
+
+<section class="steps">
+  <h2 style="color:var(--green-dark);font-weight:800;margin-bottom:24px;">How It Works</h2>
+  <div class="step">
+    <div class="num">1</div>
+    <div><h3>Free Consultation</h3><p>A relaxed chat to understand your goals, lifestyle, and what's held you back before.</p></div>
+  </div>
+  <div class="step">
+    <div class="num">2</div>
+    <div><h3>Personalized Plan</h3><p>Nana Esi builds a nutrition and habit plan tailored specifically to you.</p></div>
+  </div>
+  <div class="step">
+    <div class="num">3</div>
+    <div><h3>Ongoing Support</h3><p>Regular check-ins, adjustments, and encouragement to keep you moving forward.</p></div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <h2>Ready to Get Started?</h2>
+  <p>Book a free consultation and let's talk about your goals.</p>
+  <a href="https://calendly.com/davidacquahnunoo/30min" target="_blank" rel="noopener noreferrer" class="cta-main">Book Your Free Consult →</a>
+</section>
+
+<footer>© 2026 Nana Esi · Weight Management Coach · @i_am_esi</footer>
+
+</body>
+</html>
